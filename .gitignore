@@ -1,0 +1,8 @@
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+
+.byebug_history
+
+# Mac files
+.DS_Store
