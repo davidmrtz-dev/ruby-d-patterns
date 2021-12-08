@@ -6,18 +6,18 @@ end
 
 class ElectricEngine < Engine
   def process
-    '{Result of the ElectricEngine}'
+    '{Result of ElectricEngine}'
   end
 end
 
 class CombustionEngine < Engine
   def process
-    '{Result of the CombustionEngine}'
+    '{Result of CombustionEngine}'
   end
 end
 
 class HibridEngine < Engine
   def process
-    '{Result of the HibridEngine}'
+    '{Result of HibridEngine}'
   end
 end

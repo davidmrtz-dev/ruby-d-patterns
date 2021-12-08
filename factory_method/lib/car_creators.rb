@@ -5,7 +5,7 @@ class CarCreator
     raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
   end
 
-  def drive
+  def create
     engine = factory_method
     "#{engine.process}"
   end

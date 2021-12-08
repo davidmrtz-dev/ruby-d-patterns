@@ -5,7 +5,7 @@ require 'pry'
 require_relative '../lib/car_creators.rb'
 
 def client_code(car_creator)
-  print "#{car_creator.drive}"
+  print "#{car_creator.create}"
 end
 
 client_code(ElectricCarCreator.new)
