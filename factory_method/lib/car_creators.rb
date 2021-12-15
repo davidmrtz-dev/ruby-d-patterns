@@ -12,30 +12,18 @@ class CarCreator
 end
 
 class ElectricCarCreator < CarCreator
-  def initialize
-    puts 'Launched with the ElectricCarCreator.'
-  end
-
   def factory_method
     ElectricEngine.new
   end
 end
 
 class CombustionCarCreator < CarCreator
-  def initialize
-    puts 'Launched with the CombustionCarCreator.'
-  end
-
   def factory_method
     CombustionEngine.new
   end
 end
 
 class HibridCarCreator < CarCreator
-  def initialize
-    puts 'Launched with the HibridCarCreator.'
-  end
-
   def factory_method
     HibridEngine.new
   end
