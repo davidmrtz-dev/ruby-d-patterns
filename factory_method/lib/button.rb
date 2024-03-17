@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# A button interface that will be implemented by the concrete button classes
 module Button
   def render
     raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
@@ -11,20 +10,18 @@ module Button
   end
 end
 
-# Concrete Products provide various implementations of the Product interface.
-class HtmlButton
+class MacButton
   include Button
 
   def render
-    puts 'HtmlButton render'
+    puts 'MacButton render'
   end
 
   def on_click
-    puts 'HtmlButton on_click'
+    puts 'MacButton on_click'
   end
 end
 
-# Concrete Products provide various implementations of the Product interface.
 class WindowsButton
   include Button
 

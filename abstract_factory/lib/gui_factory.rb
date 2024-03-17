@@ -3,7 +3,6 @@
 require_relative 'button'
 require_relative 'checkbox'
 
-# The GUIFactory interface declares a set of methods that return different
 module GUIFactory
   def create_button
     raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
@@ -14,7 +13,6 @@ module GUIFactory
   end
 end
 
-# Each concrete factory extends the GUIFactory and is responsible for creating
 class WinFactory
   include GUIFactory
 
@@ -27,7 +25,6 @@ class WinFactory
   end
 end
 
-# Each concrete factory extends the GUIFactory and is responsible for creating
 class MacFactory
   include GUIFactory
 

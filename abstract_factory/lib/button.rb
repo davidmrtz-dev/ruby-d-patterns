@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# The Abstract Product interface declares a set of methods that the concrete
 module Button
   def render
     raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
@@ -11,7 +10,6 @@ module Button
   end
 end
 
-# Each distinct product of a product family should have a base interface. All
 class MacButton
   include Button
 
@@ -24,7 +22,6 @@ class MacButton
   end
 end
 
-# Each distinct product of a product family should have a base interface. All
 class WindowsButton
   include Button
 

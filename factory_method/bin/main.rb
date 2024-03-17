@@ -9,7 +9,7 @@ def main
   dialog.render
   dialog.on_click
 
-  dialog = HtmlDialog.new
+  dialog = MacDialog.new
   dialog.render
   dialog.on_click
 end
