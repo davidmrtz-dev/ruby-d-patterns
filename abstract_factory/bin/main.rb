@@ -2,33 +2,19 @@
 # frozen_string_literal: true
 
 require_relative '../lib/gui_factory'
+require_relative '../lib/application'
 
-# The client code works with factories and products only through abstract types:
-class Application
-  def initialize(factory)
-    @factory = factory
+def main
+  op_system = 'mac'
+
+  if op_system == 'win'
+    factory = WinFactory.new
+  else
+    factory = MacFactory.new
   end
 
-  def create_ui
-    button = @factory.create_button
-    checkbox = @factory.create_checkbox
-    button.render
-    checkbox.render
-  end
+  app = Application.new(factory)
+  app.create_ui
 end
 
-# The application picks the factory type and creates it in runtime (usually at
-# initialization stage), depending on the configuration or environment
-# variables.
-win_app = Application.new(WinFactory.new)
-mac_app = Application.new(MacFactory.new)
-
-win_app.create_ui
-mac_app.create_ui
-# Output:
-# WindowsButton render
-# WindowsCheckbox render
-# MacButton render
-# MacCheckbox render
-# The client code works with factories and products only through abstract types:
-# class Application
+main if __FILE__ == $PROGRAM_NAME

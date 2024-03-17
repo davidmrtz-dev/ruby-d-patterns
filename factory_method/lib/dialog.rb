@@ -2,7 +2,6 @@
 
 require_relative './button'
 
-# The Creator
 class Dialog
   def initialize
     @button = create_button
@@ -21,16 +20,14 @@ class Dialog
   end
 end
 
-# Concrete Creators override the factory method in order to change the resulting product's type.
 class WindowsDialog < Dialog
   def create_button
     WindowsButton.new
   end
 end
 
-# Concrete Creators override the factory method in order to change the resulting product's type.
-class HtmlDialog < Dialog
+class MacDialog < Dialog
   def create_button
-    HtmlButton.new
+    MacButton.new
   end
 end

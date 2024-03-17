@@ -1,0 +1,16 @@
+
+AllCops:
+  RunRailsCops: false
+  Exclude:
+    - 'vendor/**/*'
+    - 'config/**/*'
+
+  Layout/IndentationWidth:
+    Enabled: true
+    Width: 2
+
+  Style/Documentation:
+    Enabled: false
+
+  Metrics/LineLength:
+    Max: 100
