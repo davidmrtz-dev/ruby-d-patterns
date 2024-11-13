@@ -31,3 +31,7 @@ def main
 end
 
 main if __FILE__ == $PROGRAM_NAME
+
+# Output:
+# Moto Naked parts: seats, basic engine, trip computer
+# Moto Sport parts: premium seats, sport engine, trip computer, premium gps, ai break assist
