@@ -3,7 +3,6 @@
 
 require_relative '../lib/shape_factory'
 require_relative '../lib/drawing_app'
-require 'pry'
 
 def main
   factory = ShapeFactory.new

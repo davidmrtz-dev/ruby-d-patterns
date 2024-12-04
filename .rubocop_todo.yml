@@ -47,3 +47,6 @@ Layout/LineLength:
 Style/FrozenStringLiteralComment:
   Enabled: true
   EnforcedStyle: always_true
+
+Style/ParallelAssignment:
+  Enabled: false
