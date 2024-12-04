@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Factory Flyweight to create and manage particle instances
 
 require_relative 'particles'

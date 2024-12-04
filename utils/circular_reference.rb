@@ -17,8 +17,6 @@ def main
 
   obj3.instance_variable_set(:@obj4, obj4)
   obj4.instance_variable_set(:@obj3, obj3)
-
-  obj2 = nil
   obj4 = nil
 
   GC.start
@@ -28,7 +26,6 @@ def main
 end
 
 main if __FILE__ == $PROGRAM_NAME
-
 
 # Step-by-step explanation of what happens:
 
@@ -44,7 +41,8 @@ main if __FILE__ == $PROGRAM_NAME
 
 # - `weak_obj2` is still not `nil` because `obj2` was garbage collected, but `weak_obj2` is a weak reference,
 #  which means its value is not automatically updated when the referenced object is garbage collected.
-#  Therefore, `weak_obj2` still points to the memory address of the object that has already been garbage collected, resulting in `weak_obj2.nil?` returning `false`.
+#  Therefore, `weak_obj2` still points to the memory address of the object that has already been garbage collected,
+# resulting in `weak_obj2.nil?` returning `false`.
 
 # - `obj4` is `nil` because, as it was set to `nil` before calling `GC.start`, there are no references to `obj4` anymore.
 # Therefore, the garbage collector collects it during the `GC.start` call, making `obj4.nil?` return `true`.
