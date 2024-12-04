@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PaymentProcessor
   def initialize(payment_gateway)
     @payment_gateway = payment_gateway

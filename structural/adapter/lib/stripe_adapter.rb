@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StripeAdapter
   def initialize(stripe_gateway)
     @stripe_gateway = stripe_gateway

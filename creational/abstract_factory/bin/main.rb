@@ -7,11 +7,11 @@ require_relative '../lib/application'
 def main
   op_system = 'mac'
 
-  if op_system == 'win'
-    factory = WinFactory.new
-  else
-    factory = MacFactory.new
-  end
+  factory = if op_system == 'win'
+              WinFactory.new
+            else
+              MacFactory.new
+            end
 
   app = Application.new(factory)
   app.create_ui

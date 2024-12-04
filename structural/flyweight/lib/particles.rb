@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Particle abstract class and its concrete implementations
 class Particle
   def render(x, y, color, speed, direction)
@@ -8,6 +10,7 @@ end
 # Concrete Particle classes with intrinsic state
 class Circle < Particle
   def initialize(radius)
+    super
     @radius = radius
   end
 
@@ -18,6 +21,7 @@ end
 
 class Rectangle < Particle
   def initialize(width, height)
+    super
     @width = width
     @height = height
   end
@@ -29,6 +33,7 @@ end
 
 class Triangle < Particle
   def initialize(base, height)
+    super
     @base = base
     @height = height
   end
@@ -40,6 +45,7 @@ end
 
 class Ellipse < Particle
   def initialize(radius_x, radius_y)
+    super
     @radius_x = radius_x
     @radius_y = radius_y
   end
