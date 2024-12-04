@@ -4,12 +4,16 @@
 Dir[File.join(__dir__, '../lib/*.rb')].sort.each { |file| require_relative file }
 
 def main
-  opengl_circle = OpenGLCircle.new(10, 20, 15)
-  directx_rectangle = DirectXRectangle.new(5, 5, 30, 40)
+  opengl_renderer = OpenGLRenderer.new
+  directx_renderer = DirectXRenderer.new
 
-  opengl_circle.draw
+  circle = Circle.new(opengl_renderer, 10, 20, 15)
+  rectangle = Rectangle.new(directx_renderer, 5, 5, 30, 40)
+
+  circle.draw
   # Output: "Rendering circle at (10, 20) with radius 15 using OpenGL"
-  directx_rectangle.draw
+
+  rectangle.draw
   # Output: "Rendering rectangle at (5, 5) with width 30 and height 40 using DirectX"
 end
 

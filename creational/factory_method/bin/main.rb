@@ -1,7 +1,6 @@
 # !/usr/bin/ruby
 # frozen_string_literal: true
 
-require 'pry'
 require_relative '../lib/dialog'
 
 def main
