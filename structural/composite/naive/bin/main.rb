@@ -17,11 +17,11 @@ def main
   access_control = AccessControl.new(user: user1, manager: manager_role, admin: admin_role)
 
   # Access Checks
-  puts access_control.has_access_to?(:user, file1, :read)    # true (User1 owns file1)
-  puts access_control.has_access_to?(:user, file2, :read)    # false (User1 does not own file2)
-  puts access_control.has_access_to?(:manager, file2, :read) # true (Manager can read any file)
-  puts access_control.has_access_to?(:admin, file2, :edit)   # true (Admin can edit any file)
-  puts access_control.has_access_to?(:admin, file1, :edit)   # true (Admin can edit any file)
+  puts access_control.access_to?(:user, file1, :read)    # true (User1 owns file1)
+  puts access_control.access_to?(:user, file2, :read)    # false (User1 does not own file2)
+  puts access_control.access_to?(:manager, file2, :read) # true (Manager can read any file)
+  puts access_control.access_to?(:admin, file2, :edit)   # true (Admin can edit any file)
+  puts access_control.access_to?(:admin, file1, :edit)   # true (Admin can edit any file)
 end
 
 main if __FILE__ == $PROGRAM_NAME

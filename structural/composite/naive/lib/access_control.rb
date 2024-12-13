@@ -9,14 +9,14 @@ class AccessControl
     @admin = admin
   end
 
-  def has_access_to?(role_type, resource, action)
+  def access_to?(role_type, resource, action)
     case role_type
     when :user
-      user ? user.has_access_to?(resource, action) : false
+      user ? user.access_to?(resource, action) : false
     when :manager
-      manager ? manager.has_access_to?(resource, action) : false
+      manager ? manager.access_to?(resource, action) : false
     when :admin
-      admin ? admin.has_access_to?(resource, action) : false
+      admin ? admin.access_to?(resource, action) : false
     else
       false
     end
