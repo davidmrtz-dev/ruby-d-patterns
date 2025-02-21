@@ -1,6 +1,5 @@
 ### Ruby Design Patterns
 
-
 Welcome to the Ruby Design Patterns Repository!
 This repository contains examples of various design patterns implemented in Ruby.
 Each pattern example is fully functional and can be executed from the command line.
